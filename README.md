@@ -1,16 +1,24 @@
 # CASA0018-DL4SN
 
 
-# Report title goes here
+# Magic Wand
 
-Name of author, link to github repo with project work in / link to Edge Impulse projects
+Zhenkun Wang, https://github.com/DoubleU-ANG/CASA0018-DL4SN / https://studio.edgeimpulse.com/studio/384213
 
 ## Introduction
-- an overview of what the project does
-- your inspiration for making the project 
-- examples that it is based on. 
+This project aims to develop a home window assistant based on gesture recognition, allowing users to interact with windows in their house using natural movements and gestures instead of  physical contact or input methods provided by traditional home assistant like keyboards or touchscreens. This project deploys deep learning model on a ‘magic wand’ to make it recognize users’ gestures, and open and close window according to those gestures.
 
-*Tip: probably ~200 words and images are good!*
+This magic wand detects users’ gestures via fusion sensor group (Accelerometer, Gyroscope and Magnetometer) on Arduino nano, and processes and analyzes the motion pattern to turn it into command to control window to open and close.
+
+### Inspiration
+#### The weather of London
+London is known for its ever-changing weather pattern which can swiftly change between rainy and sunny day. Consequently, the windows in the home need to be open and closed frequently, which is quite annoying.
+#### Gesture Recognition
+By analyzing motion patterns captured by sensors or cameras, gesture recognition systems can recognize specific gestures and translate them into commands or actions, facilitating human-computer interaction experiences in various applications such as gaming, virtual reality, augmented reality, robotics, and smart devices.
+#### Harry Potter
+I am a big fan of Harry Potter, and I always want to have my own magic wand. So in this project I deploy deep learning on a magic wand model to make it magical, enabling it to control the window by recognizing specific gestures.
+
+This project is building based on a tutorial on youtube which make arduino nano to recognize two motion patterns: move left-right and up-down.
 
 ## Research Question
 What is the problem you are trying to solve
