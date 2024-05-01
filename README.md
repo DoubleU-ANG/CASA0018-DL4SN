@@ -127,15 +127,8 @@ During the second deployment test, When the rotation speed is moderate or low, t
 By this project, I learned how to train the deep learning model, from collecting data, to how to build the model and adjust the model parameters and neural network architecture, and finally successfully deploying the model on the device. In this process, I encountered the common problem: overfit in the model training process, and the dataset was adjusted by the corresponding solution, which finally undermined the problem and improved the accuracy of the model.
 
 ## Bibliography
-*If you added any references then add them in here using this format:*
 
-1. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). http://google.com
-
-2. Last name, First initial. (Year published). Title. Edition. (Only include the edition if it is not the first edition) City published: Publisher, Page(s). http://google.com
-
-*Tip: we use [https://www.citethisforme.com](https://www.citethisforme.com) to make this task even easier.* 
-
-----
+1. Arduino tinyml kit tutorial #6: Gesture controlled led state using edgeimpulse (2021) YouTube. Available at: https://www.youtube.com/watch?v=tO5ZfbDDVY8&t=472s (Accessed: 18 April 2024). 
 
 ## Declaration of Authorship
 
