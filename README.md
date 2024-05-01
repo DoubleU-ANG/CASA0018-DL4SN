@@ -36,7 +36,7 @@ Use different deep learning model by changing their training parameters includin
 ### 5. Deployment & Application
 Deploy the best trained deep learning model on the Arduino nano 33 BLE, and test the functionality of the model: recognizing clockwise rotation and counterclockwise rotation, and control the window open or close based on the motion patterns.
 
-<img src="DL/workflow.jpg" height="500em" />
+<img src="DL/workflow.png" height="500em" />
 
 ## Data
 ### Data Collection
