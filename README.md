@@ -41,7 +41,9 @@ Deploy the best trained deep learning model on the Arduino nano 33 BLE, and test
 ## Data
 ### Data Collection
 The dataset in this project contains three different types of motion samples, including clockwise rotation, counterclockwise rotation and stop, collected by Arduino. To ensure the diversity and complexity of the data, both the motion samples of clockwise and counterclockwise rotation are recorded in different speed (fast, medium and slow). Additionally, to prevent classifying other motions into clockwise rotation and counterclockwise rotation, noise was added by randomly shaking the wand when collecting the data of stop.
-
+<img src="DL/clockwise.png" height="300em" />
+<img src="DL/counterclockwise.png" height="300em" />
+<img src="DL/STOP.png" height="300em" />
 ### Data Preprocessing
 Assigning a label to each data point, indicating the content it represents. By doing so during training, the model can learn the mapping relationship between the input data features and the labels, enabling accurate prediction or classification of new data.
 
