@@ -116,11 +116,11 @@ By this project, I learned how to train the deep learning model, from collecting
 
 ## Declaration of Authorship
 
-I, AUTHORS NAME HERE, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
+I, Zhenkun Wang, confirm that the work presented in this assessment is my own. Where information has been derived from other sources, I confirm that this has been indicated in the work.
 
 
-*Digitally Sign by typing your name here*
+Zhenkun Wang
 
-ASSESSMENT DATE
+2024/5/1
 
-Word count: 
+Word count:1569 
