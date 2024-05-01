@@ -36,7 +36,7 @@ Use different deep learning model by changing their training parameters includin
 ### 5. Deployment & Application
 Deploy the best trained deep learning model on the Arduino nano 33 BLE, and test the functionality of the model: recognizing clockwise rotation and counterclockwise rotation, and control the window open or close based on the motion patterns.
 
-<br><br><img src="DL/workflow.png" height="500em" />
+<img src="DL/workflow.png" height="500em" />
 
 ## Data
 ### Data Collection
@@ -104,6 +104,8 @@ Neural network architecture refers to the structure and organization of layers a
 According to the experiments, too simple or complex network architecture is detrimental to the model performance. 
 
 The final neural network architecture and parameter was decided after the experiment:
+
+<img src="DL/lastmodel.png" height="500em" />
 
 ## Results and Observations
 Finally, a well-performed deep learning model successfully deployed on Arduino, which enable Arduino to recognize three different types of gesture: clockwise rotation, counterclockwise rotation and stop. Here, I use my magic wand to control another arduino nano and turn on different color light to represent the open window , close window and stop.
