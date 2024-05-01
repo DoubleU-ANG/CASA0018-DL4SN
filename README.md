@@ -69,7 +69,7 @@ According to the line graph, the increase in number of epochs cannot ensure bett
 ### Parameter 2: Learning rate
 This parameter refers to the rate at which the model's parameters (weights and biases) are updated during training
 
-From this line graph, increasing learning rate to 0.001 can improve the performance. When its value was between 0.001 and 0.002, the model's performance declined and began to climb after 0.002 to peak at 0.003, and then continued to decline, which indicates overfit. Therefore, the value of learning rate was set as 0.001 in the rest of training.
+According to this line graph, increasing learning rate to 0.001 can improve the performance. When its value was between 0.001 and 0.002, the model's performance declined and began to climb after 0.002 to peak at 0.003, and then continued to decline, which indicates overfit. Therefore, the value of learning rate was set as 0.001 in the rest of training.
 
 ### Parameter 3: Drop out rate
 This parameter refer to the probability of dropping out each neuron in a layer during training
