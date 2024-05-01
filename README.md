@@ -8,7 +8,7 @@ Zhenkun Wang, https://github.com/DoubleU-ANG/CASA0018-DL4SN / https://studio.edg
 ## Introduction
 This project aims to develop a home window assistant based on gesture recognition, allowing users to interact with windows in their house using natural movements and gestures instead of  physical contact or input methods provided by traditional home assistant like keyboards or touchscreens. This project deploys deep learning model on a ‘magic wand’ to make it recognize users’ gestures, and open and close window according to those gestures.
 
-This magic wand detects users’ gestures via fusion sensor group (Accelerometer, Gyroscope and Magnetometer) on Arduino nano, and processes and analyzes the motion pattern to turn it into command to control window to open and close.
+This magic wand detects users’ gestures via inertial sensor group (Accelerometer, Gyroscope and Magnetometer) on Arduino nano, and processes and analyzes the motion pattern to turn it into command to control window to open and close.
 
 ### Inspiration
 #### The weather of London
@@ -27,7 +27,7 @@ How can gesture recognition technology be effectively integrated into home assis
 This project develops a gestured-based smart home assistant “magic wand” and can be mainly divided into five parts.
 
 ### Data Collection
-Collecting motion patterns data including clockwise rotation, counterclockwise rotation and stop along with some background random movements via fusion sensor group.
+Collecting motion patterns data including clockwise rotation, counterclockwise rotation and stop along with some background random movements via inertial sensor group.
 ### Building Deep Learning Model
 Deciding which signal processing block and learning block to use in order to extract features and classify new data.
 ### Features Extraction & Classification
