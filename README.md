@@ -11,11 +11,11 @@ This project aims to develop a home window assistant based on gesture recognitio
 This magic wand detects users’ gestures via inertial sensor group (Accelerometer, Gyroscope and Magnetometer) on Arduino nano, and processes and analyzes the motion pattern to turn it into command to control window to open and close.
 
 ### Inspiration:
-#### The weather of London
+#### 1. The weather of London
 London is known for its ever-changing weather pattern which can swiftly change between rainy and sunny day. Consequently, the windows in the home need to be open and closed frequently, which is quite annoying.
-#### Gesture Recognition
+#### 2. Gesture Recognition
 By analyzing motion patterns captured by sensors or cameras, gesture recognition systems can recognize specific gestures and translate them into commands or actions, facilitating human-computer interaction experiences in various applications such as gaming, virtual reality, augmented reality, robotics, and smart devices.
-#### Harry Potter
+#### 3. Harry Potter
 I am a big fan of Harry Potter, and I always want to have my own magic wand. So in this project I deploy deep learning on a magic wand model to make it magical, enabling it to control the window by recognizing specific gestures.
 
 This project is building based on a tutorial on youtube which make arduino nano to recognize two motion patterns: move left-right and up-down.
@@ -25,15 +25,15 @@ How can gesture recognition technology be effectively integrated into home assis
 
 ## Application Overview
 This project develops a gestured-based smart home assistant “magic wand” and can be mainly divided into five parts:
-### Data Collection
+### 1. Data Collection
 Collecting motion patterns data including clockwise rotation, counterclockwise rotation and stop along with some background random movements via inertial sensor group.
-### Building Deep Learning Model
+### 2. Building Deep Learning Model
 Deciding which signal processing block and learning block to use in order to extract features and classify new data.
-### Features Extraction & Classification
+### 3. Features Extraction & Classification
 Process the data by extracting features and classify them based on those features.
-### Deep Learning Model Training & Evaluation
+### 4. Deep Learning Model Training & Evaluation
 Use different deep learning model by changing their training parameters including number of epochs, learning rate, neural network architecture, evaluate their performance and choose the best one to deploy on the physical device.
-### Deployment & Application
+### 5. Deployment & Application
 Deploy the best trained deep learning model on the Arduino nano 33 BLE, and test the functionality of the model: recognizing clockwise rotation and counterclockwise rotation, and control the window open or close based on the motion patterns.
 
 ## Data
@@ -100,7 +100,7 @@ During the second deployment test, When the rotation speed is moderate or low, t
 4. Make a real model of window by 3D printing
 
 ## Reflection
-By this project, I learned how to train the deep learning model, from collecting data, to how to build the model and adjust the model parameters and neural network architecture, and finally successfully deploying the model on the device. In this process, I encountered the common problem: overfit in the model training process, and the data set was adjusted by the corresponding solution, which finally undermined the problem and improved the accuracy of the model.
+By this project, I learned how to train the deep learning model, from collecting data, to how to build the model and adjust the model parameters and neural network architecture, and finally successfully deploying the model on the device. In this process, I encountered the common problem: overfit in the model training process, and the dataset was adjusted by the corresponding solution, which finally undermined the problem and improved the accuracy of the model.
 
 ## Bibliography
 *If you added any references then add them in here using this format:*
