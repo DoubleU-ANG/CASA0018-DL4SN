@@ -94,14 +94,11 @@ During the first deployment test, the data was collected very properly and easy 
 During the second deployment test, When the rotation speed is moderate or low, the model was performed with a high accuracy rate. But when the rotation is faster, Both clockwise rotation and counterclockwise rotation were classified to clockwise rotation, I think this phenomenon is the overfit, which means that the model finds a cheat code: all the fast rotations are classified to clockwise rotation. The reason should be that the training samples of counterclockwise rotation is insufficient, which lacks the sample of counterclockwise rotation in high speed. Therefore, in the next data collection process, the samples of counterclockwise rotation in high speed were added to the training dataset. After that, the problem have been largely alleviated. The model improves the accuracy in the deployment test.
 
 ## Future Development
-### 1.
-Recollect gesture data to increase the number and diversity of samples
-### 2.
-Retrain the neural network model and adjust structure and parameters, trying to find better deep learning model
-### 3.
-Add more gesture categories to expand functionality of the magic wand
-### 4.
-Make a real model of window by 3D printing
+
+1. Recollect gesture data to increase the number and diversity of samples
+2. Retrain the neural network model and adjust structure and parameters, trying to find better deep learning model
+3.Add more gesture categories to expand functionality of the magic wand
+4.Make a real model of window by 3D printing
 
 ## Reflection
 By this project, I learned how to train the deep learning model, from collecting data, to how to build the model and adjust the model parameters and neural network architecture, and finally successfully deploying the model on the device. In this process, I encountered the common problem: overfit in the model training process, and the data set was adjusted by the corresponding solution, which finally undermined the problem and improved the accuracy of the model.
