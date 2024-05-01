@@ -21,24 +21,42 @@ I am a big fan of Harry Potter, and I always want to have my own magic wand. So 
 This project is building based on a tutorial on youtube which make arduino nano to recognize two motion patterns: move left-right and up-down.
 
 ## Research Question
-What is the problem you are trying to solve
-
-*Tip: probably 1 or 2 sentences*
+How can gesture recognition technology be effectively integrated into home assistant “magic wand” to enable the  control of windows based on user gestures.
 
 ## Application Overview
-Thinking back to the various application diagrams you have seen through the module - how would you describe an overview of the building blocks of your project - how do they connect, what do the component parts include.
+This project develops a gestured-based smart home assistant “magic wand” and can be mainly divided into five parts.
 
-*Tip: probably ~200 words and a diagram is usually good to convey your design!*
+### Data Collection
+Collecting motion patterns data including clockwise rotation, counterclockwise rotation and stop along with some background random movements via fusion sensor group.
+### Building Deep Learning Model
+Deciding which signal processing block and learning block to use in order to extract features and classify new data.
+### Features Extraction & Classification
+Process the data by extracting features and classify them based on those features.
+### Deep Learning Model Training & Evaluation
+Use different deep learning model by changing their training parameters including number of epochs, learning rate, neural network architecture, evaluate their performance and choose the best one to deploy on the physical device.
+### Deployment & Application
+Deploy the best trained deep learning model on the Arduino nano 33 BLE, and test the functionality of the model: recognizing clockwise rotation and counterclockwise rotation, and control the window open or close based on the motion patterns.
+
 
 ## Data
-Describe what data sources you have used and any cleaning, wrangling or organising you have done. Including some examples of the data helps others understand what you have been working with.
+### Data Collection
+The dataset in this project contains three different types of motion samples, including clockwise rotation, counterclockwise rotation and stop, collected by Arduino. To ensure the diversity and complexity of the data, both the motion samples of clockwise and counterclockwise rotation are recorded in different speed (fast, medium and slow). Additionally, to prevent classifying other motions into clockwise rotation and counterclockwise rotation, noise was added by randomly shaking the wand when collecting the data of stop.
 
-*Tip: probably ~200 words and images of what the data 'looks like' are good!*
+### Data Preprocessing
+Assigning a label to each data point, indicating the content it represents. By doing so during training, the model can learn the mapping relationship between the input data features and the labels, enabling accurate prediction or classification of new data.
+
+### Dataset
+This data set contains three types of data with a total of 150 samples and a duration of 25 minutes. The entire dataset was split into two parts: training set and testing set, with 80% split for the training set and 20% to the test set, which facilitates effective model training and evaluation, ensuring the model's generalization ability and reliability.
 
 ## Model
-This is a Deep Learning project! What model architecture did you use? Did you try different ones? Why did you choose the ones you did?
+In this project, two different methods for processing block have tried, they are: Spectral Analysis and IMU. And the model used in learning block is Classification.
 
-*Tip: probably ~200 words and a diagram is usually good to describe your model!*
+### Spectral Analysis: Spectral analysis in deep learning refers to the process of analyzing the frequency domain representation of signals or data using techniques derived from spectral analysis methods, which isgreat for analyzing repetitive motion, such as data from accelerometer.
+
+### IMU (Syntiant): The IMU is a sensor device that measures and reports specific kinematic properties of an object, such as acceleration, angular velocity, and sometimes magnetic field strength. IMUs are commonly used in various applications, including robotics, virtual reality, motion tracking, and wearable devices. In deep learning, IMU can be utilized as input sources to train models for tasks such as gesture recognition, activity recognition, pose estimation, and navigation.
+
+### Model Test
+After experimental comparison, the performance of spectral analysis and IMU was quite different in accuracy. The performance of spectral analysis was good, whose accuracy was nearly 90%, while the performance of IMU was poor, whose accuracy was nearly 50%. Therefore, I adopted the model combination of spectral analysis and classification for training in the following experiments.
 
 ## Experiments
 What experiments did you run to test your project? What parameters did you change? How did you measure performance? Did you write any scripts to evaluate performance? Did you use any tools to evaluate performance? Do you have graphs of results? 
