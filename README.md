@@ -97,8 +97,8 @@ During the second deployment test, When the rotation speed is moderate or low, t
 
 1. Recollect gesture data to increase the number and diversity of samples
 2. Retrain the neural network model and adjust structure and parameters, trying to find better deep learning model
-3.Add more gesture categories to expand functionality of the magic wand
-4.Make a real model of window by 3D printing
+3. Add more gesture categories to expand functionality of the magic wand
+4. Make a real model of window by 3D printing
 
 ## Reflection
 By this project, I learned how to train the deep learning model, from collecting data, to how to build the model and adjust the model parameters and neural network architecture, and finally successfully deploying the model on the device. In this process, I encountered the common problem: overfit in the model training process, and the data set was adjusted by the corresponding solution, which finally undermined the problem and improved the accuracy of the model.
