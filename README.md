@@ -36,7 +36,7 @@ Use different deep learning model by changing their training parameters includin
 ### 5. Deployment & Application
 Deploy the best trained deep learning model on the Arduino nano 33 BLE, and test the functionality of the model: recognizing clockwise rotation and counterclockwise rotation, and control the window open or close based on the motion patterns.
 
-<img src="DL/workflow.png" height="500em" />
+<div align="center"><img src="DL/workflow.png" height="500em" /><div>
 
 ## Data
 ### Data Collection
@@ -44,19 +44,19 @@ The dataset in this project contains three different types of motion samples, in
 
 <div align="center"><img src="DL/clockwise.png" height="300em" /><div>
 
-<img src="DL/counterclockwise.png" height="300em" />
+<div align="center"><img src="DL/counterclockwise.png" height="300em" /><div>
 
-<img src="DL/STOP.png" height="300em" />
+<div align="center"><img src="DL/STOP.png" height="300em" /><div>
 
 ### Data Preprocessing
 Assigning a label to each data point, indicating the content it represents. By doing so during training, the model can learn the mapping relationship between the input data features and the labels, enabling accurate prediction or classification of new data.
 
-<img src="DL/Labeling.png" height="400em" />
+<div align="center"><img src="DL/Labeling.png" height="400em" /><div>
 
 ### Dataset
 This data set contains three types of data with a total of 150 samples and a duration of 25 minutes. The entire dataset was split into two parts: training set and testing set, with 80% split for the training set and 20% to the test set, which facilitates effective model training and evaluation, ensuring the model's generalization ability and reliability.
 
-<img src="DL/DATASET.png" height="500em" />
+<div align="center"><img src="DL/DATASET.png" height="500em" /><div>
 
 ## Model
 In this project, two different methods for processing block have tried, they are: Spectral Analysis and IMU. And the model used in learning block is Classification.
@@ -70,7 +70,7 @@ The IMU is a sensor device that measures and reports specific kinematic properti
 ### Model Test
 After experimental comparison, the performance of spectral analysis and IMU was quite different in accuracy. The performance of spectral analysis was good, whose accuracy was nearly 90%, while the performance of IMU was poor, whose accuracy was nearly 50%. Therefore, I adopted the model combination of spectral analysis and classification for training in the following experiments.
 
-<img src="DL/MODEL.png" height="500em" />
+<div align="center"><img src="DL/MODEL.png" height="500em" /><div>
 
 ## Experiments
 In order to find the best model, Dozens of experiments were conducted. During these experiments, several parameters were modified to evaluate the performance of the model. Additionally, to evaluate the performance of the model by considering all the factor, I customized a script for calculating performance: score = training accuracy*0.6-loss*0.6+ test accuracy * 0.4
@@ -78,28 +78,28 @@ In order to find the best model, Dozens of experiments were conducted. During th
 ### Parameter 1: Number of training cycles (Epoch) 
 This parameter refers to how many times that the model pass through the entire training dataset during the training phase of a neural network model.
 
-<img src="DL/epochnumber.png" height="400em" />
+<div align="center"><img src="DL/epochnumber.png" height="400em" /><div>
 
 According to the line graph, the increase in number of epochs cannot ensure better performance of the network, which also has the disadvantage of increasing training time. Therefore, the number of epochs was set as 20 in the rest of the training.
 
 ### Parameter 2: Learning rate
 This parameter refers to the rate at which the model's parameters (weights and biases) are updated during training
 
-<img src="DL/learningrate.png" height="400em" />
+<div align="center"><img src="DL/learningrate.png" height="400em" /><div>
 
 According to this line graph, increasing learning rate to 0.001 can improve the performance. When its value was between 0.001 and 0.002, the model's performance declined and began to climb after 0.002 to peak at 0.003, and then continued to decline, which indicates overfit. Therefore, the value of learning rate was set as 0.001 in the rest of training.
 
 ### Parameter 3: Drop out rate
 This parameter refer to the probability of dropping out each neuron in a layer during training
 
-<img src="DL/dropoutrate.png" height="400em" />
+<div align="center"><img src="DL/dropoutrate.png" height="400em" /><div>
 
 According to the line graph, during the increase of dropout rate from 0.1, the overall performance of the model showed a downward trend. Therefore, the value of dropout rate was set as 0.1 in the rest of training. 
 
 ### Neural network architecture
 Neural network architecture refers to the structure and organization of layers and nodes within a neural network. The complexity and type of neural network architecture can vary widely, depending on the task it is designed to perform.
 
-<img src="DL/dropoutrate.png" height="400em" />
+<div align="center"><img src="DL/architecture.png" height="400em" /><div>
 
 According to the experiments, too simple or complex network architecture is detrimental to the model performance. 
 
