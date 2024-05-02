@@ -10,7 +10,7 @@ This project aims to develop a home window assistant based on gesture recognitio
 
 This magic wand detects users’ gestures via inertial sensor group (Accelerometer, Gyroscope and Magnetometer) on Arduino nano, and processes and analyzes the motion pattern to turn it into command to control window to open and close.
 
-<img src="DL/magicwand.png" height="400em" />
+<img src="DL/magicwand.jpg" height="400em" />
 
 ### Inspiration:
 #### 1. The weather of London
@@ -112,11 +112,11 @@ The final neural network architecture and parameter was decided after the experi
 ## Results and Observations
 Finally, a well-performed deep learning model successfully deployed on Arduino, which enable Arduino to recognize three different types of gesture: clockwise rotation, counterclockwise rotation and stop. Here, I use my magic wand to control another arduino nano and turn on different color light to represent the open window(red) , close window(green) and stop(blue).
 
-<img src="DL/clock.png" height="300em" />
+<img src="DL/clock.jpg" height="300em" />
 
-<img src="DL/counter.png" height="300em" />
+<img src="DL/counter.jpg" height="300em" />
 
-<img src="DL/stop.png" height="300em" />
+<img src="DL/stop.jpg" height="300em" />
 
 ### Observation 1:
 During the first deployment test, the data was collected very properly and easy to identify, for example: make the arduino completely static while collecting the ‘stop’, so that when the wand detects other actions including random shaking, those actions are also classified into clockwise and counterclockwise rotation. I think the reason is that the ‘stop’ training dataset is not diverse enough. Therefore, in the next data collection process, the complexity of the ‘stop’ data is increased: noise(random movement) is added to the ‘stop’ dataset. After that the problem is greatly improved, and the random movements will no longer be classified into clockwise and counterclockwise rotation.
