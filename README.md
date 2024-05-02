@@ -10,6 +10,8 @@ This project aims to develop a home window assistant based on gesture recognitio
 
 This magic wand detects users’ gestures via inertial sensor group (Accelerometer, Gyroscope and Magnetometer) on Arduino nano, and processes and analyzes the motion pattern to turn it into command to control window to open and close.
 
+<img src="DL/magicwand.png" height="400em" />
+
 ### Inspiration:
 #### 1. The weather of London
 London is known for its ever-changing weather pattern which can swiftly change between rainy and sunny day. Consequently, the windows in the home need to be open and closed frequently, which is quite annoying.
@@ -18,7 +20,7 @@ By analyzing motion patterns captured by sensors or cameras, gesture recognition
 #### 3. Harry Potter
 I am a big fan of Harry Potter, and I always want to have my own magic wand. So in this project I deploy deep learning on a magic wand model to make it magical, enabling it to control the window by recognizing specific gestures.
 
-This project is building based on a tutorial on youtube which make arduino nano to recognize two motion patterns: move left-right and up-down.
+##### This project is building based on a tutorial on youtube which make arduino nano to recognize two motion patterns: move left-right and up-down.
 
 ## Research Question
 How can gesture recognition technology be effectively integrated into home assistant “magic wand” to enable the  control of windows based on user gestures.
@@ -108,7 +110,13 @@ The final neural network architecture and parameter was decided after the experi
 <img src="DL/lastmodel.png" height="500em" />
 
 ## Results and Observations
-Finally, a well-performed deep learning model successfully deployed on Arduino, which enable Arduino to recognize three different types of gesture: clockwise rotation, counterclockwise rotation and stop. Here, I use my magic wand to control another arduino nano and turn on different color light to represent the open window , close window and stop.
+Finally, a well-performed deep learning model successfully deployed on Arduino, which enable Arduino to recognize three different types of gesture: clockwise rotation, counterclockwise rotation and stop. Here, I use my magic wand to control another arduino nano and turn on different color light to represent the open window(red) , close window(green) and stop(blue).
+
+<img src="DL/clock.png" height="300em" />
+
+<img src="DL/counter.png" height="300em" />
+
+<img src="DL/stop.png" height="300em" />
 
 ### Observation 1:
 During the first deployment test, the data was collected very properly and easy to identify, for example: make the arduino completely static while collecting the ‘stop’, so that when the wand detects other actions including random shaking, those actions are also classified into clockwise and counterclockwise rotation. I think the reason is that the ‘stop’ training dataset is not diverse enough. Therefore, in the next data collection process, the complexity of the ‘stop’ data is increased: noise(random movement) is added to the ‘stop’ dataset. After that the problem is greatly improved, and the random movements will no longer be classified into clockwise and counterclockwise rotation.
